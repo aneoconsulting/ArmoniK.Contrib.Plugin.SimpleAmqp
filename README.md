@@ -1,0 +1,1 @@
+# ArmoniK.Contrib.Plugin.SimpleAmqp
