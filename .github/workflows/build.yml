@@ -7,8 +7,8 @@ jobs:
   build-test:
     runs-on: ubuntu-latest
     env:
-      TAG: "0.14.3"
-      SHA: "19de5e9cf78564f6e2beaa4ed6fe76a86048640e"
+      TAG: "0.16.0"
+      SHA: "c34ba943c30abdf48aa818a138dbcd8a81e6b8f6"
     steps:
      - name: Checkout
        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3
