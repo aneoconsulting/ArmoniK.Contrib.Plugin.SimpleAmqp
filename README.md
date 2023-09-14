@@ -9,8 +9,8 @@ The two docker files allow to build new images of the polling agent and the cont
 Clone this repository, place yourself at the root and build the images using:
 
 ```shell
-docker build --build-arg IMAGE=dockerhubaneo/armonik_pollingagent:0.14.3 -t  pollingagentplugin:0.14.3 -f ./PollingAgent/Dockerfile .
-docker build --build-arg IMAGE=dockerhubaneo/armonik_control:0.14.3 -t submitterplugin:0.14.3 -f ./Submitter/Dockerfile .
+docker build --build-arg IMAGE=dockerhubaneo/armonik_pollingagent:0.17.0 -t  pollingagentplugin:0.17.0 -f ./PollingAgent/Dockerfile .
+docker build --build-arg IMAGE=dockerhubaneo/armonik_control:0.17.0 -t submitterplugin:0.17.0 -f ./Submitter/Dockerfile .
 ```
 
 The `IMAGE` argument serves to pass the base image as command line argument.
@@ -31,13 +31,13 @@ export SUBMITTER_IMAGE="submitterplugin"
 A last step before deploying Core is to pass needed configuration variables using `TF_VAR_custom_env_vars`:
 
 ```shell
-export TF_VAR_custom_env_vars='{ "Components__QueueAdaptorSettings__ClassName" = "Plugin.QueueBuilder", "Components__QueueAdaptorSettings__AdapterAbsolutePath" = "/adapters/queue/plugin/Plugin.dll" }'
+export TF_VAR_custom_env_vars='{ "Components__QueueAdaptorSettings__ClassName" = "ArmoniK.Contrib.Plugin.SimpleAmqp.QueueBuilder", "Components__QueueAdaptorSettings__AdapterAbsolutePath" = "/adapters/queue/simpleamqp/ArmoniK.Contrib.Plugin.SimpleAmqp.dll" }'
 ```
 
 Finally, you can deploy Core:
 
 ```shell
-just tag=0.14.3 deploy
+just tag=0.17.0 deploy
 ```
 
 It will be deployed using the two images of polling agent and submitter that you changed and it will take into consideration the configuration of the plugin that you provided.
