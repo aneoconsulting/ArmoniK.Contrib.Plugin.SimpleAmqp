@@ -21,6 +21,8 @@ The next step is to use these images in the deployment of ArmoniK.Core. First, c
 git clone https://github.com/aneoconsulting/ArmoniK.Core.git.
 ```
 
+Next, check [the documentation](https://github.com/aneoconsulting/armonik.core) to make sure you have all the requirements needed to deploy Core.
+
 Then you will need to change two variables in order to use the images you built with your plugin, not default images:
 
 ```shell
