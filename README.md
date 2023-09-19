@@ -18,7 +18,7 @@ The `IMAGE` argument serves to pass the base image as command line argument.
 The next step is to use these images in the deployment of ArmoniK.Core. First, clone the repository:
 
 ```shell
-git clone https://github.com/aneoconsulting/ArmoniK.Core.git.
+git clone https://github.com/aneoconsulting/ArmoniK.Core.git
 ```
 
 Next, check [the documentation](https://github.com/aneoconsulting/armonik.core) to make sure you have all the requirements needed to deploy Core.
